@@ -1,0 +1,310 @@
+;===============================================================================
+;
+;
+;             ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;            ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;            ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;            ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;            ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;            ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;                      https://github.com/polybar/polybar
+;
+;===============================================================================
+
+; Colors =======================================================================
+
+[colors]
+background     = #2f343f
+background-alt = #3b414f
+foreground     = #dfdfdf
+foreground-alt = #424661
+primary        = #ffb52a
+focused        = #6c7193
+unfocused      = #2f343f
+alert          = #b478e3
+
+; Bars =========================================================================
+
+[bar/lanaya-1]
+monitor = ${env:MONITOR:DisplayPort-0}
+width   = 100%
+height  = 32
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size  = 2
+line-color = #f00
+
+border-size  = 0
+border-color = #00000000
+
+padding-left  = 8
+padding-right = 8
+
+module-margin-left  = 2
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;         
+;             
+;    
+font-2 = FontAwesome:style=Regular:pixelsize=12;3
+
+modules-left   = date
+modules-center = i3
+modules-right  = pulseaudio mpd
+
+tray-position = right
+tray-padding  = 2
+;tray-background = #0063ff
+
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up   = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click  = pointer
+cursor-scroll = ns-resize
+
+
+; ==============================================================================
+[bar/lanaya-2]
+monitor = ${env:MONITOR:HDMI-A-0}
+width   = 100%
+height  = 32
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size  = 2
+line-color = #f00
+
+border-size  = 0
+border-color = #00000000
+
+padding-left  = 8
+padding-right = 8
+
+module-margin-left  = 2
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = FontAwesome:style=Regular:pixelsize=12;3
+font-3 = "Weather Icons:style=Regular:pixelsize=13:antialias=true;2"
+
+modules-left   = weather
+modules-center = i3
+modules-right  = xkeyboard memory cpu powermenu
+
+tray-position = right
+tray-padding  = 2
+;tray-background = #0063ff
+
+;wm-restack = i3
+
+;override-redirect = true
+
+scroll-up   = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click  = pointer
+cursor-scroll = ns-resize
+
+; Modules ======================================================================
+
+[module/i3]
+type            = internal/i3
+format          = <label-state> <label-mode>
+index-sort      = true
+wrapping-scroll = false
+
+; Workspaces
+ws-icon-0 = home;
+ws-icon-1 = term;
+ws-icon-2 = chat;
+ws-icon-3 = mail;
+ws-icon-4 = games;
+ws-icon-5 = vid;
+ws-icon-6 = ff;
+ws-icon-7 = web;
+ws-icon-8 = te;
+ws-icon-9 = ide;
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding    = 4
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused            = %icon%
+label-focused-background = ${colors.focused}
+label-focused-underline  = ${colors.focused}
+label-focused-padding    = 4
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused            = %icon%
+label-unfocused-background = ${colors.background}
+label-unfocused-underline  = ${colors.unfocused}
+label-unfocused-padding    = 4
+
+; visible = Active workspace on unfocused monitor
+label-visible            = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline  = ${self.label-focused-underline}
+label-visible-padding    = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent            = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding    = 4
+
+; ==============================================================================
+
+[module/xwindow]
+type  = internal/xwindow
+label = %title:0:30:...%
+
+; ==============================================================================
+[module/xkeyboard]
+type        = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix            = "  "
+format-prefix-foreground = ${colors.foreground}
+format-prefix-underline  = ${colors.background}
+
+label-layout = %layout%
+
+label-indicator-padding    = 2
+label-indicator-margin     = 1
+label-indicator-background = ${colors.background}
+label-indicator-underline  = ${colors.background}
+
+label-separator = |
+
+; ==============================================================================
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.usb-NuForce_NuForce___DAC_2-01.analog-stereo
+
+use-ui-max = false
+interval   = 5
+
+format-volume = <ramp-volume> <label-volume>
+format-muted  = <label-muted>
+
+label-volume = %percentage%%
+label-muted  = " "
+label-muted-foreground = ${colors.foreground}
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+
+; ==============================================================================
+[module/mpd]
+type          = internal/mpd
+format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev  = 
+icon-stop  = 
+icon-play  = 
+icon-pause = 
+icon-next  = 
+
+label-separator     = |
+label-song-maxlen   = 25
+label-song-ellipsis = true
+
+; ==============================================================================
+[module/weather]
+type       = custom/script
+interval   = 600
+label-font = 4
+
+exec    = $HOME/Programs/git/polybar-forecast/target/release/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+
+; ==============================================================================
+[module/cpu]
+type                     = internal/cpu
+interval                 = 2
+format-prefix            = "  "
+format-prefix-foreground = ${colors.foreground}
+label                    = %percentage:2%%
+
+; ==============================================================================
+[module/memory]
+type                     = internal/memory
+interval                 = 2
+format-prefix            = "  "
+format-prefix-foreground = ${colors.foreground}
+label                    = %percentage_used%%
+
+; ==============================================================================
+[module/date]
+type                     = internal/date
+interval                 = 5
+format-prefix            =
+format-prefix-foreground = ${root.foreground}
+label                    =  %date% —  %time%
+
+date = %Y/%m/%d
+time = %H:%M
+
+; ==============================================================================
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open                 = 
+label-open-foreground      = ${colors.background}
+label-close                =  cancel
+label-close-foreground     = ${colors.background}
+label-separator            = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0      = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1      = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0      = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1      = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0      = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1      = cancel
+menu-2-1-exec = menu-open-0
+
+; Settings =================================================================
+
+[settings]
+screenchange-reload     = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border     = over
+;pseudo-transparency    = false
+
+[global/wm]
+margin-top    = 8
+margin-bottom = 8
+
+; vim:ft=dosini

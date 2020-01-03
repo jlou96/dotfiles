@@ -1,0 +1,145 @@
+### Connection settings ========================================================
+
+mpd_host               = "localhost"
+mpd_port               = "6600"
+mpd_music_dir          = "/media/storage/Music"
+#mpd_connection_timeout = "5"
+#mpd_crossfade_time     = "5"
+
+### Visualizer =================================================================
+
+visualizer_fifo_path     = "/tmp/mpd.fifo"
+visualizer_output_name   = "my_fifo"
+visualizer_sync_interval = "30"
+visualizer_in_stereo     = "yes"
+visualizer_type          = "spectrum"
+visualizer_look          = "º‖"
+visualizer_color         = "yellow"
+
+### Aesthetics =================================================================
+
+progressbar_look          = "─┤ "
+progressbar_color         = "yellow"
+progressbar_elapsed_color = "white"
+
+color1 = "white"
+color2 = "black"
+
+### Format =====================================================================
+##
+## Options =====================================================================
+##
+## %l - length
+## %f - short filename
+## %F - full filename
+## %a - artist
+## %t - title
+## %b - album
+## %y - year
+## %n - track number
+## %g - genre
+## %c - composer
+## %p - performer
+## %d - disc
+## %C - comment
+##
+## Colors ======================================================================
+##
+## - 0 - default window color
+## - 1 - black
+## - 2 - red
+## - 3 - green
+## - 4 - yellow
+## - 5 - blue
+## - 6 - magenta
+## - 7 - cyan
+## - 8 - white
+## - 9 - end of current color
+##
+## Syntax =======================================================================
+##
+## Values in curly braces {} will only be displayed if all values are available
+## Value groups separated by the pipe | are alternates
+##
+## Text can be a different color than that of the main window
+## e.g. for length to be green, use $3%l$9
+##
+## The syntax:
+##
+##     (k)[color]{opt}
+##
+## will write the given option, opt, in the specified color, such that the
+## output will take up k characters.
+
+### Song =======================================================================
+
+# Refer to Format for syntax
+
+song_list_format           = "{%a - }{%t}|{$8%f$9}{$3(%l)$9}"
+song_library_format        = "{%n - }{%t}|{%f}"
+song_status_format         = "{(%l) }{%a - }{%t}|{%f}"
+song_columns_list_format   = "(10)[red]{y} (28)[yellow]{a} (24)[green]{b} (5)[white]{n} $R(8)[magenta]{l}"
+
+selected_item_prefix       = "$6"
+selected_item_suffix       = "$9"
+
+### Browser ====================================================================
+
+# { name, mtime, format, noop }
+browser_sort_mode = "name"
+
+# To use this option, set browser_sort_mode to format
+#browser_sort_format = "yes"
+
+browser_playlist_prefix = "$2playlist$9"
+
+# { classic, columns }
+browser_display_mode = "columns"
+
+# { yes, no }
+show_hidden_files_in_local_browser = "no"
+
+### Media Library ==============================================================
+
+# { artist, album_artist, date, genre, composer }
+media_library_primary_tag = "artist"
+# { yes, no }
+media_library_albums_split_by_date = "no"
+media_library_sort_by_mtime        = "no"
+
+### Playlist ===================================================================
+
+# { yes, no }
+playlist_show_mpd_host = "no"
+playlist_show_remaining_time = "no"
+playlist_shorten_total_times = "no"
+playlist_separate_albums = "no"
+
+# { classic, columns }
+playlist_display_mode = "columns"
+playlist_editor_display_mode = "columns"
+
+# { # of seconds }
+playlist_disable_highlight_delay = 0
+
+### Tags =======================================================================
+
+# { custom text }
+#default_tag_editor_pattern = ""
+#tags_separator             = ""
+empty_tag_marker            = "<E>"
+
+# { yes, no }
+tag_editor_extended_numeration = "no"
+
+
+### Miscellaneous ==============================================================
+
+autocenter_mode       = "yes"
+display_volume_level  = "yes"
+display_bitrate       = "yes"
+enable_window_title   = "no"
+header_visibility     = "no"
+statusbar_visibility  = "yes"
+titles_visibility     = "no"
+

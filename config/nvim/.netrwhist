@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/hei/.config/autostart-scripts/redshift.sh'
+let g:netrw_dirhist_2='/etc/apt'
+let g:netrw_dirhist_3='/etc/apt/sources.list.d'
+let g:netrw_dirhist_4='/home/hei/Programs/git/polybar-forecast/target/release/deps'
+let g:netrw_dirhist_5='/home/hei/.config/mpd/playlists'
+let g:netrw_dirhist_6='/media/storage/real-hcg/sei-shoujo'
+let g:netrw_dirhist_7='/home/hei/Code/advent-of-code/aoc-2019'

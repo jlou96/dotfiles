@@ -1,0 +1,212 @@
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+# Autostart ====================================================================
+
+# Use dex to autostart .desktop files
+#exec --no-startup-id dex 
+
+exec --no-startup-id $HOME/.config/autostart-scripts/mouse.sh
+exec --no-startup-id $HOME/.config/autostart-scripts/redshift.sh
+exec_always --no-startup-id $HOME/.config/autostart-scripts/pactl.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec --no-startup-id xrandr --output \
+    DisplayPort-0 --mode 1920x1080 --rate 144 --left-of \
+    HDMI-A-0      --mode 1920x1080 --rate 60
+
+# For multiple monitors, simply add more images
+exec --no-startup-id \
+    feh --no-fehbg --bg-scale ~/Pictures/wallpaper/knnw/b9540f379db6bb87.png \
+    feh --no-fehbg --bg-scale ~/Pictures/wallpaper/knnw/1501477785217.jpg
+
+exec --no-startup-id compton -b
+
+# Workaround for mpd autostart being faulty
+#exec --no-startup-id sudo service mpd stop
+#exec --no-startup-id mpd
+
+# Variables ====================================================================
+
+set $mod Mod1
+
+set $LEFT  j
+set $UP    k
+set $DOWN  l
+set $RIGHT semicolon
+
+set $FLAMESHOT $HOME/Pictures/flameshot
+
+# i3-gaps ======================================================================
+
+gaps inner 8
+gaps outer 8
+
+# Get rid of title bars
+for_window [class="^.*"] border pixel 2
+
+# i3 system ====================================================================
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec \
+    "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+
+# Resize =======================================================================
+
+# Resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+
+mode "resize"
+{
+    # These bindings trigger as soon as you enter the resize mode
+    bindsym $LEFT  resize shrink width  10 px
+    bindsym $DOWN  resize grow   height 10 px
+    bindsym $UP    resize shrink height 10 px
+    bindsym $RIGHT resize grow   width  10 px
+
+    # back to normal: Enter or Escape or $mod+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+# Fonts ========================================================================
+
+# Unused at the moment
+font pango:Noto Sans 10
+
+# Colors =======================================================================
+
+set $BG_COLOR 	         #6c7193
+set $INACTIVE_BG_COLOR   #2f343f
+set $TEXT_COLOR          #f3f4f5
+set $INACTIVE_TEXT_COLOR #676e7d
+set $URGENT_BG_COLOR     #e53935
+
+# colorclass            border              background         text                 
+client.focused          $BG_COLOR           $BG_COLOR          $TEXT_COLOR
+client.focused_inactive $INACTIVE_BG_COLOR  $INACTIVE_BG_COLOR $INACTIVE_TEXT_COLOR 
+client.unfocused        $INACTIVE_BG_COLOR  $INACTIVE_BG_COLOR $INACTIVE_TEXT_COLOR
+client.urgent           $URGENT_BG_COLOR    $URGENT_BG_COLOR   $TEXT_COLOR   
+
+# Media ========================================================================
+
+# Flameshot
+# GUI
+bindsym Print exec --no-startup-id flameshot gui -p $FLAMESHOT
+# GUI with 2 second delay
+bindsym Mod1+Print exec --no-startup-id flameshot gui -p $FLAMESHOT -d 2000
+# Current window
+bindsym Mod4+Print exec --no-startup-id flameshot screen -p $FLAMESHOT
+# Fullscreen
+bindsym Mod1+Mod4+Print exec --no-startup-id flameshot full -p $FLAMESHOT
+
+
+# Alsa
+#bindsym XF86AudioLowerVolume exec amixer set Master -q 5%-
+#bindsym XF86AudioRaiseVolume exec amixer set Master -q 5%+
+
+# Pulse
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   0 toggle
+
+bindsym XF86AudioPlay  exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPrev  exec playerctl previous
+bindsym XF86AudioNext  exec playerctl next
+
+# Tiling =======================================================================
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Start a terminal
+bindsym $mod+Return       exec st
+bindsym $mod+Shift+Return exec alacritty
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Start rofi
+bindsym $mod+p exec --no-startup-id rofi -show combi
+
+# Change focus
+bindsym $mod+$LEFT  focus left
+bindsym $mod+$DOWN  focus down
+bindsym $mod+$UP    focus up
+bindsym $mod+$RIGHT focus right
+
+# Move focused window
+bindsym $mod+Shift+$LEFT  move left
+bindsym $mod+Shift+$DOWN  move down
+bindsym $mod+Shift+$UP    move up
+bindsym $mod+Shift+$RIGHT move right
+
+# Split in horizontal orientation
+bindsym $mod+h split h
+
+# Split in vertical orientation
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+# Focus the child container
+bindsym $mod+d focus child
+
+# Workspaces ===================================================================
+
+set $ws0 "home"
+set $ws1 "term"
+set $ws2 "chat"
+set $ws3 "mail"
+set $ws4 "games"
+set $ws5 "vid"
+set $ws6 "ff"
+set $ws7 "web"
+set $ws8 "te"
+set $ws9 "ide"
+
+# Switch to workspace
+bindsym $mod+0 workspace $ws0
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# Move focused container to workspace
+bindsym $mod+Shift+0 move container to workspace $ws0
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+

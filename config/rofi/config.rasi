@@ -1,0 +1,11 @@
+configuration
+{
+    modi: "drun,run,ssh";
+    combi-modi: "drun,run,ssh";
+    /* font: "IBM Plex Mono,IBM Plex Mono Medium 12"; */
+    font: "Hack 10";
+    theme: ".config/rofi/theme.rasi";
+}
+
+/* vim:ft=css
+

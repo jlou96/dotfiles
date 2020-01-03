@@ -1,0 +1,7 @@
+# Player
+player=mpv --cache 2048
+
+# Tokens
+# Twitch no longer uses user OAuth tokens.
+# https://github.com/streamlink/streamlink/issues/2680#issuecomment-557605851
+
