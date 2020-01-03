@@ -11,6 +11,7 @@ let g:indentLine_color_gui = '#928374'
 
 " lightline
 let g:lightline = { 'colorscheme': 'jellybeans' }
+set noshowmode
 
 " rainbow_parentheses
 let g:rainbow#max_level = 8
