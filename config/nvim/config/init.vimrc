@@ -17,6 +17,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'neomake/neomake'
 Plug 'scrooloose/nerdTree'
 Plug 'Yggdroot/indentLine'
 
