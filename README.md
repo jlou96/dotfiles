@@ -8,9 +8,16 @@ WIP: Run the install script.
 
 ## Configuration
 
+### Fonts
+
+* [Hack](https://github.com/source-foundry/Hack)
+* [IBM Plex Mono](https://github.com/IBM/plex)
+* [Noto Sans CJK JP](https://github.com/googlefonts/noto-cjk)
+
 ### Window Manager & Related
 
 * [i3-gaps](https://github.com/Airblader/i3)
+* [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen)
 * [compton](https://github.com/chjj/compton)
 * [polybar](https://github.com/polybar/polybar)
 * [polybar-forecast](https://github.com/kamek-pf/polybar-forecast)

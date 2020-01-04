@@ -49,8 +49,13 @@ for_window [class="^.*"] border pixel 2
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
+
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# Lock i3
+bindsym $mod+Shift+x exec --no-startup-id $HOME/.config/i3/lock.sh
+
 # Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec \
     "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
