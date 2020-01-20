@@ -137,6 +137,10 @@ bindsym $mod+Shift+Return exec alacritty
 # Kill focused window
 bindsym $mod+Shift+q kill
 
+# Start browser
+bindsym $mod+o       exec firefox
+bindsym $mod+Shift+o exec qutebrowser
+
 # Start rofi
 bindsym $mod+p exec --no-startup-id rofi -show combi
 

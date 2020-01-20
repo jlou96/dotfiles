@@ -5,6 +5,9 @@
 " Show relative line number on left margin
 set relativenumber
 
+" Enable True Color
+set termguicolors
+
 """ Spaces & Tabs ==============================================================
 
 " Automatically indent each new line

@@ -7,17 +7,16 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Aesthetic
 Plug 'dkarter/bullets.vim'
 Plug 'morhetz/gruvbox'
-Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Utility
 Plug '~/.fzf'
 
 Plug 'itchyny/lightline.vim'
+Plug 'itspriddle/vim-shellcheck'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'neomake/neomake'
 Plug 'scrooloose/nerdTree'
 Plug 'Yggdroot/indentLine'
 
