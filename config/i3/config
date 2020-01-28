@@ -39,11 +39,12 @@ set $FLAMESHOT $HOME/Pictures/flameshot
 
 # i3-gaps ======================================================================
 
+# Gap size
 gaps inner 8
 gaps outer 8
 
 # Get rid of title bars
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 
 # i3 system ====================================================================
 
@@ -87,17 +88,17 @@ font pango:Noto Sans 10
 
 # Colors =======================================================================
 
-set $BG_COLOR 	         #6c7193
+set $BG_COLOR            #6c7193
 set $INACTIVE_BG_COLOR   #2f343f
 set $TEXT_COLOR          #f3f4f5
 set $INACTIVE_TEXT_COLOR #676e7d
 set $URGENT_BG_COLOR     #e53935
 
-# colorclass            border              background         text                 
+# colorclass            border              background         text
 client.focused          $BG_COLOR           $BG_COLOR          $TEXT_COLOR
-client.focused_inactive $INACTIVE_BG_COLOR  $INACTIVE_BG_COLOR $INACTIVE_TEXT_COLOR 
+client.focused_inactive $INACTIVE_BG_COLOR  $INACTIVE_BG_COLOR $INACTIVE_TEXT_COLOR
 client.unfocused        $INACTIVE_BG_COLOR  $INACTIVE_BG_COLOR $INACTIVE_TEXT_COLOR
-client.urgent           $URGENT_BG_COLOR    $URGENT_BG_COLOR   $TEXT_COLOR   
+client.urgent           $URGENT_BG_COLOR    $URGENT_BG_COLOR   $TEXT_COLOR
 
 # Media ========================================================================
 
@@ -167,9 +168,12 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split)
+# Mimic bug.n names:
+# * m for monocle
+# * t for tiled
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+m layout tabbed
+bindsym $mod+t layout toggle split
 
 # Toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
