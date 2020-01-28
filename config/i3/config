@@ -17,8 +17,8 @@ exec --no-startup-id xrandr --output \
 
 # For multiple monitors, simply add more images
 exec --no-startup-id \
+    feh --no-fehbg --bg-scale ~/Pictures/wallpaper/knnw/6136a75f6a819db8.png \
     feh --no-fehbg --bg-scale ~/Pictures/wallpaper/knnw/b9540f379db6bb87.png \
-    feh --no-fehbg --bg-scale ~/Pictures/wallpaper/knnw/1501477785217.jpg
 
 exec --no-startup-id compton -b
 
@@ -31,8 +31,8 @@ exec --no-startup-id compton -b
 set $mod Mod1
 
 set $LEFT  j
-set $UP    k
-set $DOWN  l
+set $DOWN  k
+set $UP    l
 set $RIGHT semicolon
 
 set $FLAMESHOT $HOME/Pictures/flameshot
