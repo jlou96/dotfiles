@@ -1,0 +1,10 @@
+### System =====================================================================
+
+# zsh --------------------------------------------------------------------------
+alias -g ze="vim $HOME/dotfiles/config/zsh/.zshrc"
+
+# Volume control ---------------------------------------------------------------
+alias -g vd="pactl set-sink-volume $NUFORCE_SINK -5%"
+alias -g vu="pactl set-sink-volume $NUFORCE_SINK +5%"
+alias -g vm="pactl set-sink-mute   $NUFORCE_SINK"
+

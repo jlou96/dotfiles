@@ -41,9 +41,7 @@ export NUFORCE_SINK="alsa_output.usb-NuForce_NuForce___DAC_2-01.analog-stereo"
 
 # Aliases ----------------------------------------------------------------------
 
-alias -g vd=pactl set-sink-volume $NUFORCE_SINK -5%
-         vu=pactl set-sink-volume $NUFORCE_SINK +5%
-         vm=pactl set-sink-mute $NUFORCE_SINK
+source $ZDOTDIR/.zsh_aliases
 
 ### Plugins ====================================================================
 
