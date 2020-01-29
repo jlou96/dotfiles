@@ -29,6 +29,7 @@ WIP: Run the install script.
 * [st](https://st.suckless.org)
 * [Neovim](https://github.com/neovim/neovim)
 * [vim-plug](https://github.com/junegunn/vim-plug)
+* [zsh](http://zsh.sourceforge.net/)
 
 ### Colors
 
@@ -39,6 +40,7 @@ Color schemes are mostly attuned to gruvbox dark medium.
 
 ### Media
 
+* [cava](https://github.com/karlstav/cava)
 * [mpd](https://github.com/MusicPlayerDaemon/MPD) + [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 * [mpv](https://github.com/mpv-player/mpv)
 * [streamlink](https://github.com/streamlink/streamlink)
