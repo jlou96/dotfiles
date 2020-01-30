@@ -6,10 +6,14 @@
 # Use dex to autostart .desktop files
 #exec --no-startup-id dex 
 
+# Autostart scripts
 exec --no-startup-id $HOME/.config/autostart-scripts/mouse.sh
 exec --no-startup-id $HOME/.config/autostart-scripts/redshift.sh
 exec_always --no-startup-id $HOME/.config/autostart-scripts/pactl.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Autostart Discord
+exec --no-startup-id discord
 
 exec --no-startup-id xrandr --output \
     DisplayPort-0 --mode 1920x1080 --rate 144 --left-of \
