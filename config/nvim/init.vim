@@ -1,6 +1,6 @@
 """"" General Neovim Settings ==================================================
 
-""" Bindings ===================================================================
+""" Bindings -------------------------------------------------------------------
 
 " Set <leader> key to space.
 let mapleader = " "
@@ -11,7 +11,7 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-""" Behavior ===================================================================
+""" Behavior -------------------------------------------------------------------
 
 set encoding=utf-8
 
@@ -27,7 +27,7 @@ set undofile
 " By default, this value is 4000 (ms). Leads to noticeable delays and poor UX.
 set updatetime=50
 
-""" UI =========================================================================
+""" UI -------------------------------------------------------------------------
 
 " Give more space to display messages.
 set cmdheight=2
@@ -49,7 +49,7 @@ set termguicolors
 set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=darkgrey
 
-""" Spaces & Tabs ==============================================================
+""" Spaces & Tabs --------------------------------------------------------------
 
 " Automatically indent each new line.
 set autoindent
@@ -69,7 +69,7 @@ set shiftwidth=4
 " Number of visual spaces per tab.
 set tabstop=4
 
-""" Search =====================================================================
+""" Search ---------------------------------------------------------------------
 
 " Highlight match.
 set hlsearch
@@ -82,7 +82,7 @@ set smartcase
 
 """"" Initialization Settings ==================================================
 
-""" Plugins ====================================================================
+""" Plugins --------------------------------------------------------------------
 
 call plug#begin('~/AppData/Local/nvim/plugged')
 
@@ -104,7 +104,7 @@ call plug#end()
 
 """"" Plugin Settings ==========================================================
 
-""" Aesthetic ==================================================================
+""" Aesthetic ------------------------------------------------------------------
 
 " gruvbox.
 colorscheme gruvbox
@@ -131,7 +131,7 @@ if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-""" Bindings ===================================================================
+""" Bindings -------------------------------------------------------------------
 
 " netrw
 " Open a new vertical window taking up 30% of the horizontal space.
