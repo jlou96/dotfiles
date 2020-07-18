@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='C:\Users\Julian\Templates'
+let g:netrw_dirhist_9='S:/coding/blogsite/public'
+let g:netrw_dirhist_8='S:/coding/blogsite'
+let g:netrw_dirhist_7='S:/coding/blogsite/routes'
+let g:netrw_dirhist_6='S:\coding\blogsite'
+let g:netrw_dirhist_5='C:/Users/Julian/AppData/Local/nvim'
+let g:netrw_dirhist_4='C:\Users\Julian\AppData\Local\nvim'
+let g:netrw_dirhist_3='C:/Users/Julian/AppData/Local/nvim'
+let g:netrw_dirhist_2='C:\Users\Julian\AppData\Local\nvim'
+let g:netrw_dirhist_1='C:/Users/Julian'
