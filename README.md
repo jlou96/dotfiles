@@ -1,4 +1,6 @@
 # dotfiles
+![](https://raw.githubusercontent.com/jlou96/dotfiles/windows/splash.png)
+
 Various configuration files for Windows.
 Work in progress.
 
