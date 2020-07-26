@@ -35,5 +35,6 @@
     },
     "[rust]": {
         "editor.rulers": [100]
-    }
+    },
+    "gruvboxMaterial.italicComments": false
 }

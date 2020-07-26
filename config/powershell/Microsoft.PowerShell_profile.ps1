@@ -1,3 +1,12 @@
+# PowerShell Profile
+
+# Modules ======================================================================
+
+# Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1' -Verbose
+Import-Module wfetch
+
+# Functions ====================================================================
+
 function Prompt
 {
     $home_dir = "C:\Users\Julian"
@@ -40,3 +49,4 @@ function Rename-Sort
         Rename-Item -Path $_.Name -NewName ($FileName + $Extension)
     }
 }
+
