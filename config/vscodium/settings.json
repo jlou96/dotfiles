@@ -1,0 +1,39 @@
+{
+    // Appearance
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    // Rulers
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#404040"
+    },
+    "[cpp]": {
+        "editor.rulers": [80]
+    },
+    "[csharp]": {
+        "editor.rulers": [100]
+    },
+    "[ini]": {
+        "editor.rulers": [100]
+    },
+    "[java]": {
+        "editor.rulers": [100]
+    },
+    "[javascript]": {
+        "editor.rulers": [100]
+    },
+    "[markdown]": {
+        "editor.rulers": [100],
+        "editor.wordWrap": "on"
+    },
+    "[properties]": {
+        "editor.rulers": [100]
+    },
+    "[python]": {
+        "editor.rulers": [80]
+    },
+    "[rust]": {
+        "editor.rulers": [100]
+    }
+}
