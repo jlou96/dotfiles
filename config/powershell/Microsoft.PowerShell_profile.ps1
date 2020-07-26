@@ -12,7 +12,7 @@ function Prompt
     Write-Host "[$depth] " -ForegroundColor $depth_color -NoNewLine;
     Write-Host "hei"       -ForegroundColor DarkRed      -NoNewLine;
     Write-Host "@"         -ForegroundColor Red          -NoNewLine;
-    Write-Host "windows"   -ForegroundColor DarkYellow   -NoNewLine;
+    Write-Host "irohasu"   -ForegroundColor DarkYellow   -NoNewLine;
     Write-Host ":"         -ForegroundColor Green        -NoNewLine;
     Write-Host $base_dir   -ForegroundColor Magenta      -NoNewLine;
     Write-Host " %"        -ForegroundColor DarkMagenta  -NoNewLine;
