@@ -38,17 +38,6 @@ set relativenumber
 " Enable True Color.
 set termguicolors
 
-" Changes background color after 80 characters.
-" Note: This is a hack and results in adverse behavior such as search
-" highlight background not rendering properly.
-" However, I find this to be less obnoxious than a single column.
-" Color is tailored to be subtle on Gruxbox Medium Dark.
-""" let &colorcolumn=join(range(81,256), ',')
-
-" Renders the 81st column at a different color.
-set colorcolumn=81
-highlight ColorColumn ctermbg=0 guibg=darkgrey
-
 """ Spaces & Tabs --------------------------------------------------------------
 
 " Automatically indent each new line.
