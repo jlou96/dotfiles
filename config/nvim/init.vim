@@ -78,6 +78,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 " Aesthetic.
 Plug 'dkarter/bullets.vim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 " Utility.
 Plug 'itchyny/lightline.vim'
@@ -96,7 +97,7 @@ call plug#end()
 """ Aesthetic ------------------------------------------------------------------
 
 " gruvbox.
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 " lightline.
 let g:lightline = { 'colorscheme': 'jellybeans' }
