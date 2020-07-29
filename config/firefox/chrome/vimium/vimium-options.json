@@ -1,0 +1,26 @@
+{
+  "settingsVersion": "1.66",
+  "exclusionRules": [
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "# Insert your preferred key mappings here.",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": true,
+  "searchEngines": "# General\naz: https://www.amazon.com/s/?field-keywords=%s Amazon\nd: https://duckduckgo.com/?q=%s DuckDuckGo\ng: https://www.google.com/search?q=%s Google\nud: https://www.urbandictionary.com/define.php?term=%s UrbanDictionary\nw: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# Programming\nso: https://stackoverflow.com/search?q=%s StackOverflow\nsu: https://superuser.com/search?q=%s SuperUser\n\n# Media\nala: https://anilist.co/search/anime?search=%s Anilist (Anime)\nalm: https://anilist.co/search/manga?search=%s Anilist (Manga)\nvn: https://vndb.org/v/all?sq=%s vbdb\nyt: https://www.youtube.com/results?search_query=%s Youtube\n\n# Language\nalc: https://eow.alc.co.jp/search?q=%s alc\nji: https://jisho.org/search/%s Jisho\nkb: https://kotobank.jp/gs/?q=%s Kotobank\nwr: https://www.wordreference.com/enfr/%s WordReference (en-fr)\n\n# Games\nos: https://oldschool.runescape.wiki/?search=%s Old School RuneScape\n\n# Miscellaneous\ncp: https://chocolatey.org/packages?q=%s Chocolatey Packages",
+  "searchUrl": "https://duckduckgo.com/?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#181818),\n  color-stop(100%,#202020));\nborder: 1px solid #424242;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: #dedede;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
