@@ -37,5 +37,7 @@
         "editor.rulers": [100]
     },
     "gruvboxMaterial.italicComments": false,
-    "editor.renderWhitespace": "boundary"
+    "editor.renderWhitespace": "boundary",
+    "editor.lineNumbers": "relative",
+    "editor.codeActionsOnSave": null
 }
