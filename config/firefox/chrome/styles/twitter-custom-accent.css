@@ -1,0 +1,85 @@
+@-moz-document domain("twitter.com") {
+    :root {
+        --custom-border-color: #2b2b2b;
+        --custom-hover-background-color: #181818;
+
+        --custom-accent-color-1: #9c89b8;
+        --custom-accent-color-2: #b7a7cd;
+        --custom-selection-color: #9c89b8;
+    }
+
+    /* ==================== Border colors ==================== */
+    .css-1dbjc4n {
+        border-color: var(--custom-border-color);
+    }
+
+    .r-1tlfku8 {
+        border-color: var(--custom-border-color);
+    }
+
+    .r-my5ep6 {
+        border-bottom-color: var(--custom-border-color);
+    }
+
+    /* ==================== Icon hover backgrounds ==================== */
+    .r-1up5ays {
+        background-color: var(--custom-hover-background-color);
+    }
+
+    .r-zv2cs0 {
+        background-color: var(--custom-hover-background-color);
+    }
+
+    /* ==================== Highlight colors ==================== */
+
+    /* General */
+    .r-nw8l94 {
+        color: var(--custom-accent-color-1);
+    }
+
+    /* Button background */
+    .r-b5skir {
+        background-color: var(--custom-accent-color-1);
+    }
+
+    /* Colorized SVGs (Twitter icon, Verified badge) */
+    .r-13gxpu9 {
+        color: var(--custom-accent-color-1);
+    }
+
+    .r-zx61xx {
+        background-color: var(--custom-accent-color-2);
+    }
+
+    /* Uncolorized SVGs (Sidebar icons, Comment/Tweet/Like/Share icons) */
+    /*
+    .r-yyyyoo {
+        color: var(--custom-accent-color-1);
+    }
+    */
+
+    /* Heart icon */
+    .r-daml9f {
+        color: var(--custom-accent-color-1);
+        background-color: var(--custom-hover-background-color);
+    }
+
+    .r-wcu388 {
+        color: var(--custom-accent-color-1);
+        background-color: var(--custom-hover-background-color);
+    }
+
+    /* Cyclical circles (Loading icon, Tweet length icon) */
+    /*
+    .r-ywje51 {
+        color: var(--custom-accent-color-1);
+    }
+    */
+
+    /* Text input highlight */
+    /*
+    .r-homxoj::selection {
+        background-color: var(--custom-accent-color-1);
+    }
+    */
+}

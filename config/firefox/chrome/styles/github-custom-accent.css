@@ -1,0 +1,173 @@
+@-moz-document domain("github.com") {
+    :root {
+        /* Accent colors from lightest to darkest */
+        --github-accent-color-1: #b7a7cd;
+        --github-accent-color-2: #9c89b8;
+        --github-accent-color-3: #705893;
+        --github-accent-color-4: #3b3546;
+        --github-accent-color-5: #2f2a37;
+    }
+    
+    /* ==================== General Text ==================== */
+    a {
+        color: var(--github-accent-color-2);
+    }
+    
+    a.branch-name {
+        color: var(--github-accent-color-2);
+    }
+    
+    .link-gray:hover, .link-gray-dark:hover, .link-hover-blue:hover {
+        color: var(--github-accent-color-2) !important;
+    }
+    
+    .pagination .previous_page, .pagination .next_page {
+        color: var(--github-accent-color-3);
+    }
+    
+    /* ==================== Buttons ==================== */
+    .btn {
+        border-color: var(--github-accent-color-5);
+    }
+    
+    .btn-1 {
+        background-color: var(--github-accent-color-3);
+    }
+    
+    .btn-1.hover, .btn-1:hover, [open] > .btn-1 {
+        background-color: var(--github-accent-color-2);
+    }
+    
+    .btn-outline {
+        color: var(--github-accent-color-2);
+    }
+    
+    .btn-outline:hover, [open] > .btn-outline {
+        background-color: var(--github-accent-color-2);
+    }
+    
+    .btn-link {
+        color: var(--github-accent-color-2);
+    }
+    
+    .btn-primary {
+        background-color: var(--github-accent-color-3);
+    }
+    
+    .btn-primary.hover, .btn-primary:hover, [open] > .btn-primary {
+        background-color: var(--github-accent-color-2);
+    }
+    
+    .delete-topic-button, .topic-tag, .topic-tag-action {
+        color: var(--github-accent-color-2);
+    }
+    
+    .filter-item.selected, .filter-item[aria-current]:not([aria-current="false"]), .filter-item[aria-selected="true"] {
+        background-color: var(--github-accent-color-3);
+    }
+    
+    /* ==================== Images & Icons ==================== */
+    .notification-indicator .mail-status {
+        background: var(--github-accent-color-2);
+    }
+    
+    .notification-indicator:hover .mail-status {
+        background-color: var(--github-accent-color-1);
+    }
+    
+    img {
+        color: var(--github-accent-color-2);
+    }
+    
+    .color-blue-3 {
+        color: var(--github-accent-color-2) !important;
+    }
+    
+    /* ==================== Borders ==================== */
+    .border {
+        border-color: var(--github-accent-color-4) !important;
+    }
+    
+    .border-gray-light {
+        border-color: var(--github-accent-color-4) !important;
+    }
+    
+    .border-sm-right, .border-md-right {
+        border-right: 1px solid var(--github-accent-color-5) !important;
+    }
+    
+    .border-md-bottom {
+        border-bottom-color: var(--github-accent-color-4) !important;
+    }
+    
+    .UnderlineNav {
+        border-bottom-color: var(--github-accent-color-1);
+    }
+    
+    .UnderlineNav-item.selected,
+    .UnderlineNav-item[aria-current]:not([aria-current="false"]),
+    .UnderlineNav-item[role="tab"][aria-selected="true"] {
+        border-bottom-color: var(--github-accent-color-3);
+    }
+    
+    .UnderlineNav-item:focus, .UnderlineNav-item:hover {
+        border-bottom-color: var(--github-accent-color-1);
+    }
+    
+    .Subhead {
+        border-bottom-color: var(--github-accent-color-4);
+    }
+    
+    .Box-header {
+        border-color: var(--github-accent-color-4);
+    }
+    
+    .Box-header--blue {
+        border-color: var(--github-accent-color-4);
+    }
+    
+    .Box-row {
+        border-top-color: var(--github-accent-color-5);
+    }
+    
+    .Box {
+        border-color: var(--github-accent-color-5);
+    }
+    
+    .BorderGrid-cell {
+        border-color: var(--github-accent-color-5);
+    }
+    
+    .menu {
+        border-color: var(--github-accent-color-5);
+    }
+    
+    .menu-item {
+        border-bottom-color: var(--github-accent-color-5);
+    }
+    
+    .table-list-header {
+        border-color: var(--github-accent-color-4);
+    }
+    
+    .markdown-body h1 {
+        border-color: var(--github-accent-color-3);
+    }
+    
+    .markdown-body h2 {
+        border-color: var(--github-accent-color-4);
+    }
+    
+    .SideNav-item {
+        border-color: var(--github-accent-color-4);
+    }
+    
+    .subnav-search-input:focus {
+        border-color: var(--github-accent-color-2);
+    }
+    
+    /* ==================== Miscellaneous ==================== */
+    .Box-row:first-of-type {
+        background-color: var(--github-accent-color-4);
+    }
+}
