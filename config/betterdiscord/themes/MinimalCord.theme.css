@@ -1,0 +1,223 @@
+/**
+ * @name MinimalCord
+ * @author Gibbu#1211, modified by Heiyami#1108
+ * @version 0.1.0
+ * @description MinimalCord modification.
+ * @source https://github.com/Gibbu/BetterDiscord-Themes/tree/master/MinimalCord
+*/
+
+@import url("https://gibbu.github.io/BetterDiscord-Themes/MinimalCord/base.css");
+
+/* Black Box user tags */
+@import url('https://monstrousdev.github.io/themes/addons/user-tags.css');
+
+/* ==================== Colors ==================== */
+:root {
+    --accent: 156, 137, 184;
+    --accent-color-1: #9c89b8;
+    --accent-color-2: #7b6c92;
+
+    --black-1: #1f1f1f;
+    --black-2: #222222;
+    --black-3: #272727;
+    --black-4: #2b2b2b;
+    --black-5: #2f2f2f;
+
+    --white-1: #fefefe;
+    --white-2: #fafafa;
+    --white-3: #dedede;
+    --white-4: #dadada;
+    --white-5: #c4c4c4;
+
+    --font-header: 'HK Grotesk';
+    --font-message: 'Noto Sans CJK JP';
+    --font-monospace: 'Inconsolata';
+
+    /* TODO: Skin emoji picker more. */
+    /* Position in center, expand size, change colors. */
+    --emoji-picker-height: 220px;
+
+    --search-results-width: 25vw;
+    --chat-message-padding: 16px;
+    --chat-message-spacing: 16px;
+}
+
+.theme-dark {
+    --foreground-1: var(--black-4);
+    --foreground-2: var(--black-3);
+    --foreground-divider: var(--white-4);
+
+    --background-1: var(--black-2);
+    --background-2: var(--black-1);
+
+    --box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+
+    --channel-selected-bg: var(--accent-color-2);
+    --message-box: var(--black-3);
+    --scrollbar: var(--black-2);
+}
+
+/* Embedded media card */
+.grid-1nZz7S {
+    background-color: var(--black-2);
+}
+
+/* Search bar */
+#app-mount .privateChannels-1nO12o .searchBar-6Kv8R2 .searchBarComponent-32dTOx:hover {
+    background: var(--black-4);
+}
+
+/* Server pills */
+.item-2hkk8m {
+    height: 100%;
+    background-color: var(--accent-color-1);
+}
+
+/* Selected public channel (i.e. server) */
+#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU {
+    background: var(--black-4) !important;
+}
+
+#app-mount .wrapper-1ucjTd.modeSelected-1zApJ_ .content-3at_AU:hover {
+    background: var(--black-5) !important;
+}
+
+/* Selected private channel (i.e. DM) */
+#app-mount .privateChannels-1nO12o .channel-2QD9_O.selected-aXhQR6 .layout-2DM8Md {
+    background: var(--black-4) !important;
+}
+
+#app-mount .privateChannels-1nO12o .channel-2QD9_O.selected-aXhQR6 .layout-2DM8Md:hover {
+    background: var(--black-5) !important;
+}
+
+/* Containers (channel groups, roles, etc.) */
+.container-2ax-kl {
+    color: var(--white-5) !important;
+}
+
+/* New message indicator (in between messages) */
+#app-mount .divider-JfaTT5 span.unreadPill-2HyYtt {
+    color: var(--accent-color-1);
+}
+
+/* Spoiler text */
+.theme-dark .spoilerText-3p6IlD.hidden-HHr2R9 {
+    background-color: var(--accent-color-2);
+}
+
+.theme-dark .spoilerText-3p6IlD.hidden-HHr2R9:hover {
+    background-color: var(--accent-color-1);
+}
+
+/* Filled button */
+.lookFilled-1Gx00P.colorBrand-3pXr91 {
+    background-color: var(--accent-color-1);
+}
+
+/* ==================== Fonts ==================== */
+::-webkit-input-placeholder, textarea {
+    font-family: var(--font-message);
+    font-size: 12px;
+}
+
+body, button, input, select {
+    font-family: var(--font-header);
+    font-size: 12px;
+}
+
+/* New Messages Notification (top bar) */
+.barButtonBase-3UKlW2 {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase !important;
+}
+
+/* Username and status (in server member list) */
+.nameAndDecorators-5FJ2dg {
+    font-family: ver(--font-message);
+    font-size:12px;
+    font-weight: 250;
+}
+
+/* Username (in DM list) */
+.name-uJV0GL {
+    color: var(--white-3);
+}
+
+/* Status (in DM list) */
+.text-3MU_QQ {
+    font-size: 12px;
+}
+
+/* Containers (channel groups, roles, etc.) */
+.container-2ax-kl {
+    color: var(--white-5) !important;
+    font-family: var(--font-header);
+    font-size: 14px;
+    font-weight: 666;
+}
+
+/* Channel names */
+.name-3_Dsmg {
+    font-family: var(--font-header);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Usernames (in messages) */
+.username-1A8OIy {
+    font-family: var(--font-header);
+    font-size:16px;
+    font-weight: 500;
+}
+
+/* Messages */
+.cozy-3raOZG .messageContent-2qWWxC,
+.markup-2BOw-j {
+    font-family: var(--font-message);
+    font-size:14px;
+    font-weight: 200;
+}
+
+/* Mentions */
+.wrapper-3WhCwL {
+    font-family: var(--font-header);
+    font-size: 14px;
+    font-weight: 350;
+}
+
+/* "(edited)" */
+.edited-3sfAzf {
+    font-size: 12px;
+}
+
+/* Message input area */
+#app-mount .inner-MADQqc {
+    font-family: var(--font-header);
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+/* Personal username (bottom left corner) */
+.title-eS5yk3 {
+    font-family: var(--font-header);
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* Monospace text regions */
+#app-mount .attachment-33OFj0,
+#app-mount .wrapper-35wsBm,
+#app-mount code {
+    font-family: var(--font-monospace);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* ==================== UI Tweaks ==================== */
+/* Message cards */
+#app-mount .cozyMessage-3V1Y8y {
+    border-radius: 4px;
+}

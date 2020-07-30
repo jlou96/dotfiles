@@ -16,13 +16,13 @@
     --cff-tab-font-size: 10pt;
     --cff-tab-font-weight: 350;
     --cff-tab-height: 32px;
-    --cff-tab-pinned-bg: #70c1b3;
-    --cff-tab-selected-bg: #4989b8;
-    --cff-tab-soundplaying-bg: #9c89b8;
+    --cff-tab-pinned-bg: #705893;
+    --cff-tab-selected-bg: #9c89b8;
+    --cff-tab-soundplaying-bg: #699cb9;
 
     /* URL bar */
     --cff-urlbar-color: #777777;
-    --cff-urlbar-focused-color: #98c1d9;
+    --cff-urlbar-focused-color: #b7a7cd;
     --cff-urlbar-font-family: "Noto Sans CJK JP", sans;
     --cff-urlbar-font-size: 12pt;
     --cff-urlbar-font-weight: 450;
@@ -31,8 +31,8 @@
     --cff-urlbar-results-font-size: 11pt;
     --cff-urlbar-results-font-weight: 300;
     --cff-urlbar-results-bookmark-color: #98d9be;
-    --cff-urlbar-results-url-color: #98c1d9;
-    --cff-urlbar-results-tab-color: #eaa6f7;
+    --cff-urlbar-results-url-color: #9c89b8;
+    --cff-urlbar-results-tab-color: #fca779;
 
     /* Megabar -- https://www.userchrome.org/megabar-styling-firefox-address-bar.html */
     --mbarstyler-popout-pixels: 0px;
@@ -90,7 +90,7 @@
 }
 
 #tabbrowser-tabs {
-    --tab-loading-fill: #033433 !important;
+    --tab-loading-fill: #3b3546 !important;
 
 }
 
