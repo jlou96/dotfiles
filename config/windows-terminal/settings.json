@@ -100,7 +100,7 @@
         { "command": "unbound", "keys": "ctrl+alt+," },
 
         // Unbind fullscreen.
-        { "command": "unbound", "keys", "alt+enter" },
-        { "command": "unbound", "keys", "f11" }
+        { "command": "unbound", "keys": "alt+enter" },
+        { "command": "unbound", "keys": "f11" }
     ]
 }
