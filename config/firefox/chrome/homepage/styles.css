@@ -66,6 +66,8 @@ body {
     padding: 1em;
     border-radius: 3px;
     font-family: var(--homepage-text-font-family);
+    font-size: 16pt;
+    font-weight: 500;
     color: var(--homepage-fg);
     text-align: center;
 }

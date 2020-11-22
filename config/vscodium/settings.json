@@ -9,7 +9,7 @@
         "editorRuler.foreground": "#404040"
     },
     "[cpp]": {
-        "editor.rulers": [80]
+        "editor.rulers": [100]
     },
     "[csharp]": {
         "editor.rulers": [100]

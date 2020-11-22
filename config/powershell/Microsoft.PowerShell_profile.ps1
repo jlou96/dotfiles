@@ -29,6 +29,7 @@ function Prompt
     return " "
 }
 
+# Usage: cd to the folder and just run Rename-Sort with no arguments.
 function Rename-Sort
 {
     Get-ChildItem -File |

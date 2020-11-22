@@ -389,3 +389,7 @@ image#sidebar-icon {
 toolbarseparator {
     display: none;
 }
+
+.titlebar-buttonbox-container{
+    display: none !important
+}
