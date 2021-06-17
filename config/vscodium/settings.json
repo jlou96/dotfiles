@@ -39,5 +39,7 @@
     "gruvboxMaterial.italicComments": false,
     "editor.renderWhitespace": "boundary",
     "editor.lineNumbers": "relative",
-    "editor.codeActionsOnSave": null
+    "editor.codeActionsOnSave": {},
+    // Extensions
+    "rust-analyzer.serverPath": "C:\\Users\\lou_j\\AppData\\Roaming\\VSCodium\\User\\globalStorage\\matklab.rust-analyzer\\rust-analyzer-windows.exe"
 }
